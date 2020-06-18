@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ivan Badicean badican01117@gmail.com" />
     <title>Ally dropdown menu</title>
     <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./style.css" />
@@ -18,9 +19,10 @@
           </li>
 
           <li class="dropdown main-navigation__item">
-            <span tabindex="-1" class="dropdown__title" id="dropdown-title">
-              Sweets</span
-            >
+            <div tabindex="-1" class="dropdown__title" id="dropdown-title">
+              Sweets
+              <span class="dropdown__open-triangle" aria-hidden="true"></span>
+            </div>
 
             <ul
               class="dropdown__menu main-navigation__list"
@@ -58,6 +60,19 @@
       </nav>
     </nav>
 
+    <p style="margin-top: 4rem; padding: 0 1rem;">
+      Inspired by:
+      <a
+        target="_blank"
+        href="https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/"
+        >https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/</a
+      >
+    </p>
     <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
+
+    <script>
+      var handle = ally.style.focusWithin();
+      handle.disengage();
+    </script>
   </body>
 </html>

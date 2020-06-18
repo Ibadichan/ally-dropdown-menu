@@ -63,8 +63,7 @@
   pointer-events: none;
 }
 
-.dropdown__title::after {
-  content: "";
+.dropdown__open-triangle {
   border: 0.35rem solid transparent;
   border-top-color: rgba(0, 0, 255, 0.45);
   margin-left: 0.25em;
