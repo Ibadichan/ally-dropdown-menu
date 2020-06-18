@@ -4,9 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ally dropdown menu</title>
+    <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <h1>Hello world</h1>
+  <body class="page">
+    <nav>
+      <nav class="main-navigation" aria-label="Main Navigation">
+        <ul class="main-navigation__list main-navigation__list_root">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link_root" href="#"
+              >About</a
+            >
+          </li>
+
+          <li class="dropdown main-navigation__item">
+            <span tabindex="-1" class="dropdown__title" id="dropdown-title">
+              Sweets</span
+            >
+
+            <ul
+              class="dropdown__menu main-navigation__list"
+              aria-labelledby="dropdown-title"
+            >
+              <li class="main-navigation__item main-navigation__item_nested">
+                <a class="main-navigation__link dropdown__link" href="#"
+                  >Donuts</a
+                >
+              </li>
+              <li class="main-navigation__item main-navigation__item_nested">
+                <a class="main-navigation__link dropdown__link" href="#"
+                  >Cupcakes</a
+                >
+              </li>
+              <li class="main-navigation__item main-navigation__item_nested">
+                <a class="main-navigation__link dropdown__link" href="#"
+                  >Chocolate</a
+                >
+              </li>
+              <li class="main-navigation__item main-navigation__item_nested">
+                <a class="main-navigation__link dropdown__link" href="#"
+                  >Bonbons</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link_root" href="#"
+              >Order</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
   </body>
 </html>

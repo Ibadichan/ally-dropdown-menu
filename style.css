@@ -1,3 +1,99 @@
-h1 {
-  color: red;
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.main-navigation {
+  background-color: #eee;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation__list_root {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-navigation__item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.main-navigation__item_nested {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main-navigation__link {
+  display: inline-block;
+  color: blue;
+  text-align: center;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.main-navigation__link:hover,
+.main-navigation__link:focus {
+  text-decoration: underline;
+}
+
+.main-navigation__link_root {
+  padding: 1rem 0.5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__title {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  color: blue;
+  text-align: center;
+  font-size: 1.125rem;
+  pointer-events: none;
+}
+
+.dropdown__title::after {
+  content: "";
+  border: 0.35rem solid transparent;
+  border-top-color: rgba(0, 0, 255, 0.45);
+  margin-left: 0.25em;
+  transform: translateY(0.15em);
+}
+
+.dropdown:hover .dropdown__menu,
+.dropdown:focus-within .dropdown__menu {
+  opacity: 1;
+  transform: rotateX(0) translateX(-50%);
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% - 0.25rem);
+  left: 50%;
+  min-width: 150px;
+  padding: 0.5em 0;
+  border-radius: 4px;
+  box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  transform: rotateX(-90deg) translateX(-50%);
+  transform-origin: top center;
+  opacity: 0.3;
+  transition: 280ms all 120ms ease-out;
+}
+
+.dropdown__link {
+  display: block;
+  padding: 0.5em;
+  color: #444;
 }
